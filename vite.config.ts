@@ -2,10 +2,12 @@ import { defineConfig } from 'vite'
 import uni from '@dcloudio/vite-plugin-uni'
 import path from 'path'
 import Unocss from 'unocss/vite'
+import vueJsx from '@vitejs/plugin-vue-jsx'
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
+    vueJsx(),
     uni(),
     // https://github.com/antfu/unocss
     Unocss()
@@ -36,12 +38,17 @@ export default defineConfig({
   css: {
     // 配置`scss`和`less`全局变量
     preprocessorOptions: {
-      scss: {
-        additionalData: '@import "@/styles/vars/_base.scss";'
-      },
       less: {
-        additionalData: '@import "@/styles/vars/_base.less";'
+        javascriptEnabled: true,
+        // additionalData: '@import "@/styles/vars/_base.less";'
+        additionalData: `@import "${path.resolve(
+          __dirname,
+          'src/styles/vars/_base.less'
+        )}";`
       }
+      /* scss: {
+        additionalData: '@use "@/styles/vars/_base.scss";'
+      }, */
     }
   }
 })

@@ -29,7 +29,13 @@
       "style": {
         "navigationBarTitleText": "UnoCSS 示例"
       }
-    }
+    },
+    {
+        "path": "pages/tsx/index",
+        "style": {
+          "navigationBarTitleText": "TSX 示例"
+        }
+      }
   ],
   "globalStyle": {
     "navigationBarTextStyle": "black",
@@ -39,7 +45,6 @@
   },
   "easycom": {
     "custom": {
-      "^u-(.*)": "vk-uview-ui/components/u-$1/u-$1.vue"
     }
   }
 }

@@ -45,8 +45,8 @@ const title = ref('Hello')
 
 <style lang="scss" scoped>
 .scss-title {
-  font-size: $title-size;
-  color: $title-color;
+  color: $uni-color-primary;
+  font-size: $uni-font-size-title;
 }
 </style>
 
@@ -56,3 +56,4 @@ const title = ref('Hello')
   color: @title-color;
 }
 </style>
+
