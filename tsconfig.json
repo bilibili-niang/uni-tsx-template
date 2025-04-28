@@ -19,7 +19,11 @@
     "baseUrl": "./",
     "paths": {
       "@/*": ["src/*"],
-      "@components/*": ["src/components/*"]
+      "@components/*": ["src/components/*"],
+      "@ui/*": ["package/ui/*"],
+      "@core/*": ["package/core/*"],
+      "@utils/*": ["package/utils/*"],
+      "@pkg/*": ["package/*"]
     }
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
