@@ -31,10 +31,10 @@ export default defineConfig({
     alias: {
       '@': path.resolve(__dirname, './src'),
       '@components': path.resolve(__dirname, './src/components'),
-      '@ui': path.resolve(__dirname, './package/ui'),
-      '@core': path.resolve(__dirname, './package/core'),
-      '@utils': path.resolve(__dirname, './package/utils'),
-      '@pkg': path.resolve(__dirname, './package')
+      '@ui': path.resolve(__dirname, './packages/ui/src'),
+      '@core': path.resolve(__dirname, './packages/core/src'),
+      '@utils': path.resolve(__dirname, './packages/utils/src'),
+      '@pkg': path.resolve(__dirname, './packages')
     }
   },
   css: {
@@ -51,6 +51,15 @@ export default defineConfig({
       /* scss: {
         additionalData: '@use "@/styles/vars/_base.scss";'
       }, */
+    }
+  },
+  build: {
+    rollupOptions: {
+      output: {
+        chunkFileNames: 'js/[name]-[hash].js',
+        entryFileNames: 'js/[name]-[hash].js',
+        assetFileNames: 'assets/[name]-[hash][extname]'
+      }
     }
   }
 })

@@ -20,11 +20,14 @@
     "paths": {
       "@/*": ["src/*"],
       "@components/*": ["src/components/*"],
-      "@ui/*": ["package/ui/*"],
-      "@core/*": ["package/core/*"],
-      "@utils/*": ["package/utils/*"],
-      "@pkg/*": ["package/*"]
+      "@ui/*": ["packages/ui/src/*"],
+      "@core/*": ["packages/core/src/*"],
+      "@utils/*": ["packages/utils/src/*"],
+      "@pkg/*": ["packages/*"]
     }
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
+  "include": [
+    "src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue",
+    "package/**/*.ts", "package/**/*.vue"
+  ]
 }
