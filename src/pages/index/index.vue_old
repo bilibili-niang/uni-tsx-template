@@ -1,9 +1,7 @@
 <template>
   <view class="index-page">
     <Hello />
-    <!-- #ifdef H5 -->
-    <IndexTsx />
-    <!-- #endif -->
+    <HelloTsx />
     <UnoCss />
     <text class="h2"> 查看其它页面示例↓ </text>
     <view>
@@ -19,9 +17,7 @@ import './index.less'
 import { reactive } from 'vue'
 import Hello from '@/components/hello/index.vue'
 import UnoCss from '@/components/unocss/index.vue'
-// #ifdef H5
-import IndexTsx from './IndexTsx'
-// #endif
+import HelloTsx from '@/components/hello/HelloTsx'
 
 const pages = reactive([
   {
@@ -41,30 +37,22 @@ const pages = reactive([
     url: '/pages/unocss/index'
   },
   {
-    title: 'useTsx Demo',
-    url: '/pages/test/useTsx/index'
-  },
-  // #ifdef H5
-  {
     title: 'TSX Demo',
     url: '/pages/tsx/index'
   }
-  // #endif
 ])
 </script>
 
-<style lang="less" scoped>
+<style scoped>
 .index-page {
   font-style: normal;
   text-align: center;
 }
 .h2 {
-  color: @title-color;
-  font-size: @title-size;
+  color: green;
+  font-size: 50rpx;
 }
 navigator {
   color: #1e80ff;
 }
 </style>
-
-

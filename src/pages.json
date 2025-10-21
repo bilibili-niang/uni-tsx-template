@@ -35,6 +35,12 @@
         "style": {
           "navigationBarTitleText": "TSX 示例"
         }
+      },
+      {
+        "path": "pages/test/useTsx/index",
+        "style": {
+          "navigationBarTitleText": "useTsx 示例"
+        }
       }
   ],
   "globalStyle": {
