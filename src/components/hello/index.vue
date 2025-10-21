@@ -1,6 +1,5 @@
 <template>
   <view class="hello">
-    <image class="logo" src="/static/logo.png" />
     <view class="text-area">
       <text class="title">{{ title }}</text>
     </view>
@@ -56,4 +55,4 @@ const title = ref('Hello')
   color: @title-color;
 }
 </style>
-
+

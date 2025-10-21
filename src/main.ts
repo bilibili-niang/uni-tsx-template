@@ -3,11 +3,6 @@ import * as Pinia from 'pinia'
 // @ts-ignore
 import App from './App.vue'
 
-/*import './styles/vars/_base.less'
-import './styles/vars/_base.scss'*/
-
-// unocss
-// import 'uno.css'
 
 export function createApp() {
   const app = createSSRApp(App)

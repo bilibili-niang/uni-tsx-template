@@ -3,6 +3,8 @@ import uni from '@dcloudio/vite-plugin-uni'
 import path from 'path'
 import Unocss from 'unocss/vite'
 import vueJsx from '@vitejs/plugin-vue-jsx'
+// 平台环境：用于按平台切换别名文件
+const isH5 = process.env.UNI_PLATFORM === 'h5'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -32,7 +34,11 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
-      '@components': path.resolve(__dirname, './src/components')
+      '@components': path.resolve(__dirname, './src/components'),
+      '@timecard': path.resolve(
+        __dirname,
+        isH5 ? './src/shared/TimeCard.tsx' : './src/shared/TimeCard.vue'
+      )
     }
   },
   css: {
